@@ -24,7 +24,7 @@ RUN mim install mmcv-full
 RUN conda clean --all
 RUN git clone -b v0.23.2 --single-branch https://github.com/open-mmlab/mmclassification.git /mmclassification
 ENV FORCE_CUDA="1"
-WORKDIR ./mmclassification
+WORKDIR /mmclassification
 RUN pip install --no-cache-dir -e .
 
 WORKDIR /vt-internship
